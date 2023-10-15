@@ -1,11 +1,11 @@
-package com.shubham.womensafety.guardiandetail
+package com.sachin.womensafety.guardiandetail
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.shubham.womensafety.R
-import com.shubham.womensafety.database.Guardian
+import com.sachin.womensafety.database.Guardian
 import kotlinx.android.synthetic.main.list_view.view.*
 
 
@@ -13,13 +13,13 @@ class GuardianAdapter(val guardians: List<Guardian>)
     : RecyclerView.Adapter<GuardianAdapter.ViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int)
-            : GuardianAdapter.ViewHolder {
+            : ViewHolder {
         val v: View = LayoutInflater.from(parent.context)
             .inflate(R.layout.list_view,parent,false)
         return ViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: GuardianAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.name.text = guardians[position].guardianName
         holder.relation.text = guardians[position].guardianRelation
         holder.phone.text = guardians[position].guardianPhoneNo

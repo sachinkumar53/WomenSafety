@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.shubham.womensafety.DashBoardFragment">
+    tools:context="com.shubham.womensafety.com.sachin.womensafety.DashBoardFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -102,6 +102,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/guardianButton">
 
                     <RelativeLayout
+                        android:visibility="gone"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 

@@ -1,4 +1,4 @@
-package com.shubham.womensafety
+package com.sachin.womensafety
 
 import android.app.Activity
 import android.content.Intent
@@ -22,7 +22,8 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
-import com.shubham.womensafety.utils.PermissionUtils
+import com.shubham.womensafety.R
+import com.sachin.womensafety.utils.PermissionUtils
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
@@ -125,7 +126,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
             else -> {
                 PermissionUtils.requestAccessFineLocationPermission(
                     this,
-                    MapsActivity.LOCATION_PERMISSION_REQUEST_CODE
+                    LOCATION_PERMISSION_REQUEST_CODE
                 )
             }
         }
@@ -173,7 +174,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         when (requestCode) {
-            MapsActivity.LOCATION_PERMISSION_REQUEST_CODE -> {
+            LOCATION_PERMISSION_REQUEST_CODE -> {
                 if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     when {
                         PermissionUtils.isLocationEnabled(this) -> {
